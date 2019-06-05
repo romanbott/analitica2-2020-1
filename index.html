@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html>
+	<title> Tarea examen 3</title>
 <body>
 
-<h1>The onclick Event</h1>
+<h1>Tarea examen 3</h1>
 
-<p>The onclick event is used to trigger a function when an element is clicked on.</p>
+<p>Por favor, teclea tu numero de cuenta y has click en el botón para acceder a la tarea examen.</p>
 
-<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
-<form>
-<input id="cuenta" type="text" name="FirstName" value="Mickey"><br>
+
+ <form action="">
+<input id="cuenta" type="text" name="Cuenta" defaultValue="Numero de cuenta"><br>
 </ form>
-<button onclick="myFunction()">Click me</button>
+<button onclick="myFunction()" type='button'>Acceder</button>
 
 <p id="demo"></p>
+<p id="demo2"></p>
+
+
+Si tienes algún problema, por favor envía un correo a Román, o accede a este <a href="https://github.com/romanbott/analitica-2019-2/tree/master/tareas">sitio</a> y busca el pdf con los ultimos 5 digitos de tu numero de cuenta.
+
 
 <script>
 function myFunction() {
 
   var cuenta = document.getElementById("cuenta").value;
-  var cuenta = cuenta.substr(id.length - 5);
+  var cuenta = cuenta.substr(cuenta.length - 5);
   document.getElementById("demo").innerHTML = cuenta;
+  document.getElementById("demo2").innerHTML = "https://romanbott.github.io/analitica-2019-2/tareas/"+cuenta+".pdf";
+	location.href = "https://romanbott.github.io/analitica-2019-2/tareas/"+cuenta+".pdf";
 }
 </script>
 
